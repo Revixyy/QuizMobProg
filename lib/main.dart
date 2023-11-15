@@ -93,14 +93,14 @@ class _ECommerceAppState extends State<ECommerceApp> {
           // Bagian Profil Penjual
           Container(
             decoration: BoxDecoration(
-              color: Colors.blue, // Warna latar belakang sesuaikan dengan desain Anda
+              color: Colors.blue, 
             ),
             padding: EdgeInsets.all(16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CircleAvatar(
-                  // Ganti dengan gambar profil penjual
+                  
                   backgroundImage: AssetImage('assets/seller_profile.jpg'),
                   radius: 30.0,
                 ),
@@ -116,7 +116,7 @@ class _ECommerceAppState extends State<ECommerceApp> {
                       ),
                     ),
                     Text(
-                      'Rating: 4.8', // Ganti dengan rating sesuai profil penjual
+                      'Rating: 5.0', 
                       style: TextStyle(
                         color: Colors.white,
                       ),
@@ -127,7 +127,6 @@ class _ECommerceAppState extends State<ECommerceApp> {
             ),
           ),
 
-          // Bagian Profil Pengguna
           Container(
             decoration: BoxDecoration(
               border: Border(
@@ -146,7 +145,6 @@ class _ECommerceAppState extends State<ECommerceApp> {
                   style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
                 ),
                 CircleAvatar(
-                  // Ganti dengan gambar profil atau ikon yang sesuai
                   backgroundImage: AssetImage('assets/profile_image.png'),
                   radius: 20.0,
                 ),
@@ -154,7 +152,6 @@ class _ECommerceAppState extends State<ECommerceApp> {
             ),
           ),
 
-          // Bagian Pilihan Kategori
           Container(
             padding: EdgeInsets.all(16.0),
             child: Row(
@@ -162,7 +159,6 @@ class _ECommerceAppState extends State<ECommerceApp> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    // Tampilkan produk Promosi
                     setState(() {
                       selectedCategory = 'Promotion';
                     });
@@ -171,7 +167,6 @@ class _ECommerceAppState extends State<ECommerceApp> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Tampilkan produk Terlaris
                     setState(() {
                       selectedCategory = 'Best Seller';
                     });
@@ -180,7 +175,6 @@ class _ECommerceAppState extends State<ECommerceApp> {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Tampilkan produk Urutan Harga
                     setState(() {
                       selectedCategory = 'Price Order';
                     });
@@ -191,7 +185,6 @@ class _ECommerceAppState extends State<ECommerceApp> {
             ),
           ),
 
-          // Bagian Barang-barang yang akan dijual
           Expanded(
             child: ProductList(products: getProductsByCategory(selectedCategory)),
           ),
@@ -200,7 +193,7 @@ class _ECommerceAppState extends State<ECommerceApp> {
     );
   }
 
-  String selectedCategory = 'Promotion'; // Kategori default
+  String selectedCategory = 'Promotion'; 
 }
 
 class ProductList extends StatelessWidget {
